@@ -5,6 +5,11 @@ import java.util.Map;
 
 import fr.pizzeria.console.PizzeriaAdmin;
 
+/**
+ * Classe principale du projet, 
+ * @author ETY15
+ *
+ */
 public class Menu {
 
 	// Déclaration des variables

@@ -1,5 +1,13 @@
 package fr.pizzeria.model;
 
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
+
+/**
+ * Objet principal du projet. Contient toutes les informations relatives à une pizza
+ * @author ETY15
+ *
+ */
 public class Pizza {
 
 	private Integer id;
@@ -113,7 +121,39 @@ public class Pizza {
 	 */
 	@Override
 	public String toString() {
-		return "Pizza [id=" + id + ", code=" + code + ", nom=" + nom + ", prix=" + prix + ", categorie=" + categorie + "]";
+		
+		StringBuilder sb = new StringBuilder();
+		
+//		for(Field field : this.getClass().getDeclaredFields()) {
+//			if(field.getDeclaredAnnotation(ToString.class) != null) {
+//				try {
+//					Object obj = field.get(this);
+//					sb.append(obj.toString());
+//				} catch (IllegalArgumentException | IllegalAccessException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		}
+		
+		for(Field field : this.getClass().getDeclaredFields()) {
+			for(Annotation annot : field.getDeclaredAnnotations()) {
+				if(annot instanceof ToString) {
+					Object obj;
+					try {
+						obj = field.get(this);
+						sb.append(obj.toString());
+						sb.append(" ");
+					} catch (IllegalArgumentException | IllegalAccessException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		
+		
+		
+//		return "Pizza [id=" + id + ", code=" + code + ", nom=" + nom + ", prix=" + prix + ", categorie=" + categorie + "]";
+		return sb.toString();
 	}
 	
 	

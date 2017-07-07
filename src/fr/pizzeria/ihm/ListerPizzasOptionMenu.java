@@ -4,6 +4,11 @@ import fr.pizzeria.dao.IPizzaDao;
 import fr.pizzeria.dao.PizzaDaoMemoire;
 import fr.pizzeria.model.Pizza;
 
+/**
+ * Classe héritant de OptionMenu permettant de lister les pizzas
+ * @author ETY15
+ *
+ */
 public class ListerPizzasOptionMenu extends OptionMenu {
 
 	private IPizzaDao dao;
