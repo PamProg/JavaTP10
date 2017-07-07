@@ -7,6 +7,12 @@ import fr.pizzeria.exception.SavePizzaException;
 import fr.pizzeria.model.CategoriePizza;
 import fr.pizzeria.model.Pizza;
 
+/**
+ * Permet de lister, sauvegarder, modifier ou supprimer les pizzas en mémoire.
+ * {@link IPizzaDao}
+ * @author ETY15
+ *
+ */
 public class PizzaDaoMemoire implements IPizzaDao {
 
 	static private List<Pizza> pizzas;

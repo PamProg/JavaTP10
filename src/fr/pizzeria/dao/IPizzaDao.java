@@ -5,6 +5,12 @@ import java.util.List;
 import fr.pizzeria.exception.SavePizzaException;
 import fr.pizzeria.model.Pizza;
 
+/**
+ * Interface qui lie le projet à une potentielle base de données.
+ * Va faire la transition entre les "modèles" et le "stockage".
+ * @author ETY15
+ *
+ */
 public interface IPizzaDao {
 
 	/**
