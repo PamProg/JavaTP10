@@ -81,7 +81,9 @@ public class PizzaDaoMemoire implements IPizzaDao {
 	}
 
 	/**
-	 * 
+	 * Supprime la pizza de code codePizza.
+	 * Note : rien ne se passe si le code entré n'existe pas.
+	 * {@link IPizzaDao}
 	 */
 	@Override
 	public boolean deletePizza(String codePizza) {

@@ -5,7 +5,7 @@ import fr.pizzeria.dao.PizzaDaoMemoire;
 import fr.pizzeria.model.Pizza;
 
 /**
- * Classe héritant de OptionMenu permettant de lister les pizzas
+ * Permet de lister les pizzas
  * @author ETY15
  *
  */
@@ -17,12 +17,16 @@ public class ListerPizzasOptionMenu extends OptionMenu {
 		super(libelle);
 	}
 
+	/**
+	 * Récupère les pizzas via la DAO puis les affiche
+	 */
 	@Override
 	public boolean execute() {
 		
 		dao = new PizzaDaoMemoire();
 		
 		for(Pizza p : dao.findAllPizzas()) {
+			// Le test n'est théoriquement plus nécessaire
 			if(p != null) {
 				// N'est plus utile depuis que l'on a implémenté le toString() sur Pizza
 //				System.out.println(p.getCode() + " -> " 

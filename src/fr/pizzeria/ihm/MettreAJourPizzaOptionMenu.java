@@ -7,6 +7,11 @@ import fr.pizzeria.model.CategoriePizza;
 import fr.pizzeria.model.Pizza;
 import fr.pizzeria.utils.PizzeriaUtil;
 
+/**
+ * Permet de mettre à jour une pizza
+ * @author Pam
+ *
+ */
 public class MettreAJourPizzaOptionMenu extends OptionMenu {
 
 	private IPizzaDao dao;

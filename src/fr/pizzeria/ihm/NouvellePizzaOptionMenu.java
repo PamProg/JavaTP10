@@ -7,6 +7,11 @@ import fr.pizzeria.model.CategoriePizza;
 import fr.pizzeria.model.Pizza;
 import fr.pizzeria.utils.PizzeriaUtil;
 
+/**
+ * Permet d'ajouter une nouvelle pizza.
+ * @author Pam
+ *
+ */
 public class NouvellePizzaOptionMenu extends OptionMenu {
 
 	private IPizzaDao dao;
@@ -15,6 +20,10 @@ public class NouvellePizzaOptionMenu extends OptionMenu {
 		super(libelle);
 	}
 
+	/**
+	 * Récupère les informations l'utilisateur entre dans la console
+	 * puis si elles sont correctes, ajoute une nouvelle pizza via la DAO.
+	 */
 	@Override
 	public boolean execute() {
 		String codeString;

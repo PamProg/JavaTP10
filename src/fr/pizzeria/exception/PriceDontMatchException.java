@@ -1,5 +1,11 @@
 package fr.pizzeria.exception;
 
+/**
+ * Exception jetée lorsque le prix de la pizza ne correspond pas à un double.
+ * {@link : MettreAJourPizzaOptionMenu, NouvellePizzaOptionMenu}
+ * @author Pam
+ *
+ */
 @SuppressWarnings("serial")
 public class PriceDontMatchException extends Exception {
 
