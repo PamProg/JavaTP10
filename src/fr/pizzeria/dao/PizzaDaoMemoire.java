@@ -34,11 +34,19 @@ public class PizzaDaoMemoire implements IPizzaDao {
 		pizzas.add(new Pizza("IND", "L'indienne", 14.00, CategoriePizza.VIANDE));
 	}
 	
+	/**
+	 * {@link IPizzaDao}
+	 */
 	@Override
 	public List<Pizza> findAllPizzas() {
 		return pizzas;
 	}
 
+	/**
+	 * Sauve la pizza en mémoire si le code entré n'existe pas encore.
+	 * Renvoie une exception sinon.
+	 * {@link IPizzaDao}
+	 */
 	@Override
 	public boolean saveNewPizza(Pizza pizza) throws SavePizzaException {
 		
@@ -53,6 +61,10 @@ public class PizzaDaoMemoire implements IPizzaDao {
 		return true;
 	}
 
+	/**
+	 * Met à jour la pizza de code codePizza
+	 * {@link IPizzaDao}
+	 */
 	@Override
 	public boolean updatePizza(String codePizza, Pizza pizza) {
 		
@@ -68,6 +80,9 @@ public class PizzaDaoMemoire implements IPizzaDao {
 		return true;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean deletePizza(String codePizza) {
 		
