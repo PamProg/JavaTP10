@@ -20,6 +20,11 @@ public class MettreAJourPizzaOptionMenu extends OptionMenu {
 		super(libelle);
 	}
 
+	/**
+	 * Récupère le code de la pizza à modifier puis récupère les informations
+	 * de l'utilisateur. Si elles sont correctes, met à jour la pizza.
+	 * Note : ne fait rien si le code entré n'existe pas.
+	 */
 	@Override
 	public boolean execute() {
 		

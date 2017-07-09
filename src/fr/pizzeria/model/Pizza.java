@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
 /**
- * Objet principal du projet. Contient toutes les informations relatives à une pizza
+ * Objet principal du projet. Contient toutes les informations relatives à une pizza.
  * @author ETY15
  *
  */
@@ -23,6 +23,7 @@ public class Pizza {
 	
 	
 	/**
+	 * Créé une instance de pizza. Génère un id grâce à l'attribut d'instance idGenerator.
 	 * @param code
 	 * @param nom
 	 * @param prix
@@ -119,6 +120,10 @@ public class Pizza {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
+	/**
+	 * Permet d'afficher la valeur des attributs de classe.
+	 * Note : ici, n'affiche que les attributs ayant l'annotation ToString
+	 */
 	@Override
 	public String toString() {
 		
@@ -135,12 +140,16 @@ public class Pizza {
 //			}
 //		}
 		
+		// Pour chaque attribut
 		for(Field field : this.getClass().getDeclaredFields()) {
+			// Pour chaque annotation (de chaque attribut)
 			for(Annotation annot : field.getDeclaredAnnotations()) {
+				// Si l'annotation est "ToString"...
 				if(annot instanceof ToString) {
 					Object obj;
 					try {
 						obj = field.get(this);
+						// ...ajouter le nom de l'attribut (pour l'afficher)
 						sb.append(obj.toString());
 						sb.append(" ");
 					} catch (IllegalArgumentException | IllegalAccessException e) {
@@ -153,6 +162,7 @@ public class Pizza {
 		
 		
 //		return "Pizza [id=" + id + ", code=" + code + ", nom=" + nom + ", prix=" + prix + ", categorie=" + categorie + "]";
+		// Renvoie le StringBuilder contenant tout les noms d'attributs.
 		return sb.toString();
 	}
 	

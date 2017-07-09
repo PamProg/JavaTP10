@@ -6,7 +6,7 @@ import java.util.Map;
 import fr.pizzeria.console.PizzeriaAdmin;
 
 /**
- * Classe principale du projet, 
+ * Classe principale du projet, s'occupe de gérer chaque option du menu.
  * @author ETY15
  *
  */

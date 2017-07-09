@@ -1,5 +1,10 @@
 package fr.pizzeria.ihm;
 
+/**
+ * Classe abstraite représentant une option du menu.
+ * @author Pam
+ *
+ */
 public abstract class OptionMenu {
 
 	private String libelle;

@@ -1,5 +1,10 @@
 package fr.pizzeria.model;
 
+/**
+ * Représente une catégorie de pizza
+ * @author Pam
+ *
+ */
 public enum CategoriePizza {
 	
 	VIANDE("Viande"), FROMAGE("Fromage"), VEGETARIEN("Végétarien");

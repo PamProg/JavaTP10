@@ -4,6 +4,11 @@ import fr.pizzeria.console.PizzeriaAdmin;
 import fr.pizzeria.dao.IPizzaDao;
 import fr.pizzeria.dao.PizzaDaoMemoire;
 
+/**
+ * Permet de supprimer une pizza
+ * @author Pam
+ *
+ */
 public class SupprimePizzaOptionMenu extends OptionMenu {
 
 	private IPizzaDao dao;
@@ -12,6 +17,10 @@ public class SupprimePizzaOptionMenu extends OptionMenu {
 		super(libelle);
 	}
 
+	/**
+	 * Récupère le code entré par l'utilisateur et supprime la pizza qui lui est relié.
+	 * Note : ne fait rien si le code entré n'existe pas.
+	 */
 	@Override
 	public boolean execute() {
 		

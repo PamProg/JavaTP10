@@ -1,5 +1,9 @@
 package fr.pizzeria.utils;
 
+/**
+ * Classe contenant plusieurs méthodes utiles au projet.
+ * Permet la factorisation d'une partie du code.
+ */
 import org.apache.commons.text.similarity.LevenshteinDistance;
 
 import fr.pizzeria.console.PizzeriaAdmin;
@@ -18,6 +22,9 @@ public class PizzeriaUtil {
 	
 	/**
 	 * Demande la catégorie de la pizza et vérifie qu'elle soit valide
+	 * Note : ne vérifie pas encore que la catégorie soit valide.
+	 * Cependant, si la valeur entrée est à 2 ou moins de "distance" d'une
+	 * des catégories, alors la catégorie la plus proche est sélectionnée.
 	 * @return categorieString le prix valide
 	 */
 	public static CategoriePizza askAndCheckCategorie() {
