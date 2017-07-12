@@ -27,5 +27,5 @@ public abstract class OptionMenu {
 	 */
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
-	}test
+	}
 }
